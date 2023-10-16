@@ -1,4 +1,4 @@
-@import  "//fonts.googleapis.com/css?family=Montserrat";
+@import  "//fonts.googleapis.com/css?family=didact-gothic";
 
 html {
   height: 100%;
@@ -164,7 +164,6 @@ section {
 }
 
 .bg-image {
-  /* photo from: https://www.pexels.com/photo/dawn-landscape-mountains-nature-1852/ */
   background-image: url(/res/background.jpg);
   background-attachment: scroll;
   background-position: 50% 50%;
