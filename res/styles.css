@@ -37,7 +37,7 @@ section#content {
   text-align: right;
   padding-right: 10vw; /* maintain existing right padding */
   padding-top: 5vw; /* maintain existing top padding */
-  padding-left: 30vw; /* add left padding of 30% of viewport width */
+  padding-left: 20vw; /* add left padding of 30% of viewport width */
   margin-left: auto; /* pushes the content to the right */
   position: relative; /* ensure the stacking context */
   z-index: 2; /* make text appear above the image */
