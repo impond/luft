@@ -15,7 +15,7 @@ body {
   font-family: "Didact Gothic", sans-serif;
   line-height: 1.42857;
   font-size: 24px;
-  background-color: #F0F0F0;
+  background-color: #eeeeee;
   color: #0F0F0F;
 }
 
@@ -31,6 +31,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; /* This will make sure your image covers the entire div, potentially cropping it */
+}
+
+h1 {
+  margin-bottom: 0.4em;
 }
 
 section#content {
@@ -97,11 +101,11 @@ section {
 
 @media all and (min-width:481px) {
   p {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
