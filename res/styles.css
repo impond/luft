@@ -35,9 +35,12 @@ body {
 
 section#content {
   text-align: right;
-  margin-left: auto; 
-  padding: 5% 10% 0 0; 
-  z-index: 1; /* Ensures text stays above the image */
+  padding-right: 10vw; /* maintain existing right padding */
+  padding-top: 5vw; /* maintain existing top padding */
+  padding-left: 30vw; /* add left padding of 30% of viewport width */
+  margin-left: auto; /* pushes the content to the right */
+  position: relative; /* ensure the stacking context */
+  z-index: 2; /* make text appear above the image */
 }
 
 #email-icon i {
