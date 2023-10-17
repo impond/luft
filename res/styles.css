@@ -1,21 +1,74 @@
-@import  "//fonts.googleapis.com/css?family=didact-gothic";
+@import  "https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap')";
 
-html {
+html, body {
   height: 100%;
+  margin: 0;
+  position: relative; /* Ensures z-index takes effect for children */
 }
 
 body {
-  margin: 0;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-end; 
   padding: 0;
-  width: auto;
-  height: auto;
-  min-height: 100%;
-  font-family: "Montserrat",sans-serif;
+  font-family: "Didact Gothic", sans-serif;
   line-height: 1.42857;
-  font-size: 17px;
-  background-color: rgba(0,0,0,1);
-  color: #FFF;
-  word-wrap: normal;
+  font-size: 24px;
+  background-color: #F0F0F0;
+  color: #0F0F0F;
+}
+
+#bg-image {
+  position: fixed; /* Absolute position this image */
+  z-index: -1; /* Sends the image to the background */
+  top: 50%; /* Center the image vertically */
+  left: 50%; /* Center the image horizontally */
+  width: 1024px; /* Set to desired width */
+  height: 768px; /* Set to desired height */
+  transform: translate(-50%, -50%); /* Use translate to center regardless of image size */
+  max-width: 80%; /* Ensures image doesn't overflow the document */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* This will make sure your image covers the entire div, potentially cropping it */
+}
+
+section#content {
+  text-align: right;
+  margin-left: auto; 
+  padding: 5% 10% 0 0; 
+  z-index: 1; /* Ensures text stays above the image */
+}
+
+#email-icon i {
+  color: #D3D3D3; /* This is a light grey. You can adjust the hex value to choose the shade you prefer. */
+  font-size: 24px; /* You can adjust the size as you prefer */
+  transition: color 0.5s ease-in-out; /* Adds a smooth color transition */
+}
+
+#email-icon:hover i {
+  color: #0F0F0F; /* Darker grey color for hover effect. Adjust if necessary. */
+}
+
+.email-line {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px; /* Adjust space for the underline */
+}
+
+.email-line:after { /* Create the underline effect */
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+#email-icon:hover + .email-line:after {
+  width: 100%;
+  background: #D3D3D3; /* Same light grey as the icon */
 }
 
 a,a:visited,a:active,a:hover {
@@ -24,7 +77,7 @@ a,a:visited,a:active,a:hover {
 }
 
 section {
-  padding-top: 10px;
+  align-self: right;
   padding-bottom: 10px;
   position: relative;
 }
@@ -39,183 +92,22 @@ section {
   z-index: 0;
 }
 
-.form-horizontal .form-group {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.form-horizontal .btn {
-  display: block;
-  margin: 0 auto;
-}
-
-.user-signup__submit {
-  line-height: .5em;
-}
-
-.user-signup__form {
-  margin-left: -5px;
-}
-
-.user-signup__form-group {
-  padding: 0 0 0 5px;
-  position: relative;
-}
-
-@media all and (max-width: 767px) {
-  .form-horizontal .mt-table,.form-horizontal .mt-table--full,.form-horizontal .mt-table--centered,.form-horizontal .mt-table--full,.form-horizontal .mt-td--centered-vertical {
-    display: block;
-  }
-}
-
-@media all and (min-width: 768px) {
-  .form-horizontal .user-signup__col-2 {
-    width: 1%;
-  }
-}
-
-.floating-signup__wrap {
-  position: fixed;
-  z-index: 5;
-  padding: 10px;
-}
-
-.floating-signup {
-  position: relative;
-  padding: 10px 20px;
-}
-
-.floaty-vertical--middle {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-@media all and (max-width: 480px) {
-  .floaty-unfloat-at--xs.floating-signup__wrap {
-    position: static;
-    display: block;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    float: none;
-  }
-}
-
-.insert--image {
-  display: block;
-  position: relative;
-}
-
-.insert--image.wrap-off-align-center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.spacer {
-  z-index: 0;
-  width: 2.52px;
-  margin-bottom: -15px;
-  margin-top: -15px;
-}
-
-.clean-hr {
-  z-index: 0;
-  width: 100%;
-  max-width: 579.5px;
-  margin-top: 28px;
-  margin-bottom: 28px;
-}
-
-.m-lg-v {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.mt-table,.mt-table--full {
-  display: table;
-}
-
-.mt-table--full {
-  width: 100%;
-}
-
-.mt-td,.mt-td--centered-vertical {
-  display: table-cell;
-}
-
-.mt-td--centered-vertical {
-  vertical-align: middle;
-}
-
-.loading-state {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  background: url(/res/loading.gif) 50% 45% no-repeat;
-}
-
-.rel {
-  position: relative;
-}
-
-.bg-image {
-  background-image: url(/res/background.jpg);
-  background-attachment: scroll;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  opacity: .69;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-.form-control__input {
-  border-width: 0;
-  border-radius: 0;
-  font-size: 14px;
-  height: 50px;
-}
-
-.user-signup__submit {
-  border-width: 0;
-  border-radius: 0;
-  font-size: 14px;
-  padding-right: 20px;
-  padding-left: 20px;
-  height: 50px;
-  background-color: #00a651;
-  color: #FFF;
-}
-
-.user-signup__submit:hover {
-  background-color: #1cd861;
-  color: #FFF;
-}
-
 @media all and (min-width:481px) {
   p {
-    font-size: 22px;
+    font-size: 32px;
   }
 
   h1 {
-    font-size: 60px;
+    font-size: 32px;
   }
 }
 
 @media all and (min-width:769px) {
   p {
-    font-size: 22px;
+    font-size: 32px;
   }
 
   h1 {
-    font-size: 75px;
+    font-size: 32px;
   }
 }
