@@ -84,6 +84,17 @@ a,a:visited,a:active,a:hover {
   text-decoration: underline;
 }
 
+#sponsor {
+  max-height: 20px;
+  max-width: 20px;
+  font-size: 12px;
+}
+
+#footer {
+  font-size: 12px;
+}
+
+
 section {
   align-self: right;
   padding-bottom: 10px;
