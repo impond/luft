@@ -48,6 +48,11 @@ section#content {
   z-index: 2; /* make text appear above the image */
 }
 
+section#content img {
+  max-height:50px;
+  width:auto;
+}
+
 #email-icon i {
   color: #D3D3D3; /* This is a light grey. You can adjust the hex value to choose the shade you prefer. */
   font-size: 24px; /* You can adjust the size as you prefer */
@@ -90,11 +95,6 @@ a,a:visited,a:active,a:hover {
   font-size: 12px;
 }
 
-#footer {
-  font-size: 12px;
-}
-
-
 section {
   align-self: right;
   padding-bottom: 10px;
@@ -124,7 +124,7 @@ section {
 */
 
 @media all and (min-width:769px) {
-  p {
+  section#content {
     font-size: 32px;
   }
 
